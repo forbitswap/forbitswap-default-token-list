@@ -1,0 +1,39 @@
+{
+  "name": "@forbitswap/default-token-list",
+  "version": "1.0.0",
+  "description": "◦ The Forbitswap default token list",
+  "main": "build/forbitswap-default.tokenlist.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf build && mkdir -p build && node src/write.js > build/forbitswap-default.tokenlist.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "build/forbitswap-default.tokenlist.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forbitswap/default-token-list.git"
+  },
+  "keywords": [
+    "forbitswap",
+    "default",
+    "token",
+    "list"
+  ],
+  "author": "Loc Du",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Forbitswap/default-token-list/issues"
+  },
+  "homepage": "https://github.com/Forbitswap/default-token-list#readme",
+  "devDependencies": {
+    "@ethersproject/address": "^5.0.2",
+    "@forbitswap/token-lists": "^1.0.2",
+    "ajv": "^6.12.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {}
+}
